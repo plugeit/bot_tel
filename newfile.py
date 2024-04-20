@@ -198,6 +198,7 @@ async def handle_edited_message(event):
                     await message.click(0)
                     return
 async def main():
+    print("program started successfully")
     await client.start()
     await bot.start(bot_token=bot_token)
     await bot.send_message(username, "**\u26A0 Warning don't run in background. they're watching all exploring accounts continuesly, while exploring they will send a message randomly in bot to verify that you're auto user or player, and response that message ASAP. \n\n\u26D4 So Keep open bot chat and watch all messages from bot while this script is running to avoid getting BANNED.**")
@@ -206,6 +207,7 @@ async def main():
 
     await client.run_until_disconnected()
     await bot.run_until_disconnected()
+
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
